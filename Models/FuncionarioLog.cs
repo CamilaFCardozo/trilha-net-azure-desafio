@@ -7,7 +7,6 @@ namespace TrilhaNetAzureDesafio.Models
     public class FuncionarioLog : Funcionario, ITableEntity
     {
         public FuncionarioLog() { }
-
         public FuncionarioLog(Funcionario funcionario, TipoAcao tipoAcao, string partitionKey, string rowKey)
         {
             base.Id = funcionario.Id;

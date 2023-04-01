@@ -13,8 +13,7 @@ namespace trilha_net_azure_desafio.Migrations
                 name: "Funcionarios",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false).Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Endereco = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Ramal = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -31,8 +30,7 @@ namespace trilha_net_azure_desafio.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Funcionarios");
+            migrationBuilder.DropTable(name: "Funcionarios");
         }
     }
 }
